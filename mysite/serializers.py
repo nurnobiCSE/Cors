@@ -2,7 +2,7 @@ from rest_framework import serializers
 
 from mysite.models import *
 
-class skilSerializer(serializers.ModelSerializer):
+class skilSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = skilModel
         fields = ['id','name','description','creator','progress_rate','ReleasDate']
